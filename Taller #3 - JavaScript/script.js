@@ -37,17 +37,11 @@ formularioPost.addEventListener("submit", evento => {
     evento.preventDefault();
 
     divRespuestaPost.textContent = "Enviando tus datos...";
-
-    // Aquí se hace referencia a los datos de envío a la API para un nuevo Género
-    // La API de Generos, según la imagen, solo parece necesitar un 'nombre' para crear uno nuevo.
-    // Si la API requiere un 'id' para la creación o algún otro campo, deberías añadirlo aquí.
     const datosParaEnviar = {
-        nombre: formularioPost.nombre.value, // Suponemos que el input 'nombre' se usará para el nombre del género
-        // Elimina el 'email' si no es relevante para el POST de Generos
-        // email: formularioPost.email.value, 
+        nombre: formularioPost.nombre.value,
     };
 
-    fetch(`${API_BASE}/generos`, { // Cambiado de /actores a /generos
+    fetch(`${API_BASE}/generos`, {
         method: "POST", 
         headers: {
             "Content-Type": "application/json",
