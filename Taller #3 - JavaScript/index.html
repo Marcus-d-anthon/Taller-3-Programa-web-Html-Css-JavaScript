@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyecto API CodersNet</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Tarea Géneros</h1> <section id="get-section">
+        <h2>Listado de Géneros (GET)</h2> <button id="btnFetch">Cargar Géneros</button> <div id="getResults"></div>
+    </section>
+
+    <section id="post-section">
+        <h2>Añadir Nuevo Género (POST)</h2> <form id="postForm">
+            <label for="nombre">Nombre del Género:</label><br /> <input type="text" id="nombre" name="nombre" required /><br />
+            <button type="submit">Crear Género</button> </form>
+        <div id="postResponse"></div>
+    </section>
+</body>
+</html>
